@@ -4,32 +4,94 @@
   "title": "Design System: Afrah Al Ayed Beauty",
   "extensions": {
     "colorMeta": {
-      "accent": {"role": "primary", "displayName": "Warm Brown"},
-      "paper": {"role": "neutral", "displayName": "Warm Ivory"},
-      "cream": {"role": "neutral", "displayName": "Soft Cream"},
-      "peach": {"role": "secondary", "displayName": "Soft Peach"},
-      "ink": {"role": "neutral", "displayName": "Deep Brown"}
+      "accent": {
+        "role": "primary",
+        "displayName": "Warm Brown"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Ivory"
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Soft Cream"
+      },
+      "peach": {
+        "role": "secondary",
+        "displayName": "Soft Peach"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Deep Brown"
+      }
     },
     "typographyMeta": {
-      "display": {"displayName": "Ritual Display", "purpose": "Ritual feature heading; 34px below 1000px and 30px below 700px."},
-      "headline": {"displayName": "Section Heading", "purpose": "Major sections; 23px below 700px."}
+      "display": {
+        "displayName": "Ritual Display",
+        "purpose": "Ritual feature heading; 34px below 1000px and 30px below 700px."
+      },
+      "headline": {
+        "displayName": "Section Heading",
+        "purpose": "Major sections; 23px below 700px."
+      }
     },
     "shadows": [
-      {"name": "campaign-action", "value": "0 4px 18px #5b38251a", "purpose": "Campaign CTA on desktop; removed on mobile."},
-      {"name": "dialog", "value": "0 16px 70px #34251d24", "purpose": "Modal elevation."},
-      {"name": "toast", "value": "0 8px 25px #34251d22", "purpose": "Transient feedback."}
+      {
+        "name": "campaign-action",
+        "value": "0 4px 18px #5b38251a",
+        "purpose": "Campaign CTA on desktop; removed on mobile."
+      },
+      {
+        "name": "dialog",
+        "value": "0 16px 70px #34251d24",
+        "purpose": "Modal elevation."
+      },
+      {
+        "name": "toast",
+        "value": "0 8px 25px #34251d22",
+        "purpose": "Transient feedback."
+      }
     ],
     "motion": [
-      {"name": "control", "value": ".2s", "purpose": "Icon/add-button background and slide-dot width."},
-      {"name": "category", "value": "transform .4s cubic-bezier(.16,1,.3,1)", "purpose": "Category image lift by 6px."},
-      {"name": "product", "value": "transform .5s cubic-bezier(.16,1,.3,1)", "purpose": "Product image scale to 1.035."},
-      {"name": "toast", "value": "opacity .25s,transform .25s", "purpose": "Feedback entrance and exit; visible for 3000ms."},
-      {"name": "reduced-motion", "value": "transition:none!important;animation:none!important", "purpose": "Applied for prefers-reduced-motion:reduce; scrolling becomes immediate."}
+      {
+        "name": "control",
+        "value": ".2s",
+        "purpose": "Icon/add-button background and slide-dot width."
+      },
+      {
+        "name": "category",
+        "value": "transform .4s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Category image lift by 6px."
+      },
+      {
+        "name": "product",
+        "value": "transform .5s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Product image scale to 1.035."
+      },
+      {
+        "name": "toast",
+        "value": "opacity .25s,transform .25s",
+        "purpose": "Feedback entrance and exit; visible for 3000ms."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition:none!important;animation:none!important",
+        "purpose": "Applied for prefers-reduced-motion:reduce; scrolling becomes immediate."
+      }
     ],
     "breakpoints": [
-      {"name": "mobile-max", "value": "700px"},
-      {"name": "compact-max", "value": "1000px"},
-      {"name": "wide-min", "value": "1500px"}
+      {
+        "name": "mobile-max",
+        "value": "700px"
+      },
+      {
+        "name": "compact-max",
+        "value": "1000px"
+      },
+      {
+        "name": "wide-min",
+        "value": "1500px"
+      }
     ]
   },
   "components": [
@@ -53,9 +115,40 @@
   "narrative": {
     "northStar": "Warm, personal care — descriptive of the incumbent identity",
     "overview": "The supplied peach, beige and warm gold artwork defines the identity. Warm ivory surfaces and brown text extend it into a calm Arabic RTL shopping interface. The implementation is code-led and uses existing supplied assets. Review disposition: ship with limited viewport coverage; engine unavailable. Source documentation is not exhaustive rendered-device certification.",
-    "keyCharacteristics": ["Arabic RTL composition", "Original campaign artwork", "Circular categories and softly rounded product imagery", "Sparse elevation and quiet motion"],
-    "rules": [{"name": "The Existing Identity Rule", "body": "Extend the original warm artwork instead of replacing its palette with an unrelated visual world.", "section": "colors"}],
-    "dos": ["Do preserve supplied identity assets.", "Do retain keyboard focus and reduced-motion support.", "Do keep demo shopping disclosures visible."],
-    "donts": ["Don't crop campaign text on mobile.", "Don't introduce heavy shadows across product cards.", "Don't claim exhaustive viewport coverage."]
+    "keyCharacteristics": [
+      "Arabic RTL composition",
+      "Original campaign artwork",
+      "Circular categories and softly rounded product imagery",
+      "Sparse elevation and quiet motion"
+    ],
+    "rules": [
+      {
+        "name": "The Existing Identity Rule",
+        "body": "Extend the original warm artwork instead of replacing its palette with an unrelated visual world.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do preserve supplied identity assets.",
+      "Do retain keyboard focus and reduced-motion support.",
+      "Do keep demo shopping disclosures visible."
+    ],
+    "donts": [
+      "Don't crop campaign text on mobile.",
+      "Don't introduce heavy shadows across product cards.",
+      "Don't claim exhaustive viewport coverage."
+    ]
+  },
+  "shoppingMotion": {
+    "scrollMs": [
+      560,
+      700
+    ],
+    "maxStaggerMs": 135,
+    "bannerCrossfadeMs": 600,
+    "cartFlightMs": 650,
+    "feedbackMs": 380,
+    "reducedMotion": "cancel active animations; immediate state and status feedback",
+    "autoplay": false
   }
 }

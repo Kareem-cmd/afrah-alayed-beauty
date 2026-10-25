@@ -162,3 +162,7 @@ Motion is small and functional: image transforms, subtle control transitions and
 - **Don't** crop campaign text to force a different mobile composition.
 - **Don't** introduce heavy shadows across product cards or replace the warm brand palette.
 - **Don't** treat limited viewport review as proof of complete device coverage.
+
+## Scroll and shopping motion update
+
+User requested gentle scroll, banner and add-to-bag animation. IntersectionObserver triggers one-shot section and product entrances (560–700ms, product stagger capped at 135ms). Default content remains visible. Banners decode before crossfade (600ms), with latest-request protection and a restrained 700ms image settle. Add-to-bag sends a noninteractive 48px product thumbnail to the header in 650ms, followed by 380ms bag/count feedback. Dialog additions use local button feedback. All Web Animations cancel when reduced motion is enabled; cart counts and status messages remain immediate. No autoplay, animation dependency, or persistent loop.
